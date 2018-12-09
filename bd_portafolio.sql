@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 08-12-2018 a las 22:09:28
+-- Tiempo de generación: 09-12-2018 a las 02:10:52
 -- Versión del servidor: 5.7.21
 -- Versión de PHP: 7.1.16
 
@@ -82,7 +82,8 @@ CREATE TABLE IF NOT EXISTS `diligencias` (
   `dil_nombre` varchar(255) NOT NULL,
   `ex_id` int(11) NOT NULL,
   `dil_lugar` varchar(255) NOT NULL,
-  `dil_fecha` datetime NOT NULL,
+  `dil_fecha` date NOT NULL,
+  `dil_hora` time NOT NULL,
   PRIMARY KEY (`dil_id`),
   KEY `fk_diligencias_expedientes` (`ex_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
